@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +34,7 @@ public class Register extends AppCompatActivity {
         mEmail          = findViewById(R.id.email);
         mPassword       = findViewById(R.id.password);
         mMobile         = findViewById(R.id.mobile);
-        mRegisterButton = findViewById(R.id.registerBtn);
+        mRegisterButton = findViewById(R.id.loginBtn);
         mLoginButton    = findViewById(R.id.createText);
         progressBar     = findViewById(R.id.progressBar);
 
@@ -44,8 +43,8 @@ public class Register extends AppCompatActivity {
         mRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = mEmail.getText().toString().toString().trim();
-                String password = mPassword.getText().toString().toString().trim();
+                String email = mEmail.getText().toString().trim();
+                String password = mPassword.getText().toString().trim();
 
                 if(TextUtils.isEmpty(email))
                 {
@@ -89,10 +88,19 @@ public class Register extends AppCompatActivity {
                         else
                         {
                             Toast.makeText(Register.this, "Registration failed", Toast.LENGTH_SHORT).show();
+                            progressBar.setVisibility(View.GONE);
 
                         }
                     }
                 });
+
+            }
+        });
+
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
 
             }
         });
