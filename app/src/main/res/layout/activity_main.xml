@@ -18,7 +18,7 @@
         android:text="           Welcome to Home Page"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/profileimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,8 +27,8 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="310dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:onClick="logout"
         android:text="Logout"
@@ -48,11 +48,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/profileimage"
+        app:layout_constraintTop_toTopOf="@+id/profileimage" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profileimage"
         android:layout_width="90dp"
         android:layout_height="91dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/profileimage"
         app:layout_constraintTop_toBottomOf="@+id/ProfileName" />
 
     <TextView
@@ -86,10 +86,10 @@
         android:text="    Your Mobile"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toBottomOf="@+id/profileimage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/profileimage"
         app:layout_constraintTop_toBottomOf="@+id/ProfileEmail"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -103,4 +103,28 @@
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/CancelPickup"
+        android:layout_width="366dp"
+        android:layout_height="71dp"
+        android:text="Cancel Pickup Request"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.607" />
+
+    <Button
+        android:id="@+id/changeimage"
+        android:layout_width="311dp"
+        android:layout_height="56dp"
+        android:text="Change Avtar"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
